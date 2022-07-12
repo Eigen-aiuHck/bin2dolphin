@@ -67,6 +67,9 @@ int main(int argc, const char* argv[])
         sstreambuf << "\n";
     }
 
+    std::cout << sstreambuf.str();
+    std::cout << std::setfill(' ');
+
     binarydata.open("out.txt", std::ios::out);
     if(binarydata)
     {
@@ -77,8 +80,6 @@ int main(int argc, const char* argv[])
     }
     binarydata.close();
 
-    std::cout << sstreambuf.str();
-    std::cout << std::setfill(' ');
     delete valueCut32;
     
     return 0;
