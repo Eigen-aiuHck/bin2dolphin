@@ -67,6 +67,16 @@ int main(int argc, const char* argv[])
         sstreambuf << "\n";
     }
 
+    binarydata.open("out.txt", std::ios::out);
+    if(binarydata)
+    {
+        binarydata << std::string(sstreambuf.str());
+        std::cout << "Export txt file out.txt.\n";
+    }else{
+        std::cout << "Can't export txt file.\n";
+    }
+    binarydata.close();
+
     std::cout << sstreambuf.str();
     std::cout << std::setfill(' ');
     delete valueCut32;
