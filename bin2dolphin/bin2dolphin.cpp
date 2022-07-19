@@ -61,7 +61,7 @@ int main(int argc, const char* argv[])
     for (unsigned int i2 = 0; i2 != i; i2++)
     {
         sstreambuf << "0x";
-        sstreambuf << std::setw(8) << (int_sstreambuf + i2);
+        sstreambuf << std::setw(8) << (int_sstreambuf + (4 * i2));
         sstreambuf << ":dword:0x";
         sstreambuf << std::setw(8) << valueCut32[i2];
         sstreambuf << "\n";
